@@ -6,53 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Movement Example</title>
-    <style>
-        #object {
-            position: absolute;
-            top: 50px;
-            left: 50px;
-            width: 50px;
-            height: 50px;
-            background-color: blue;
-            border-radius: 50%;
-            animation: move 2s linear infinite;
-        }
-
-        @keyframes move {
-            0% {
-                left: 50px;
-            }
-
-            50% {
-                left: 500px;
-            }
-
-            100% {
-                left: 50px;
-            }
-        }
-    </style>
+    
 </head>
 
 <body>
     <div id="object"></div>
 
-    <script>
-        window.onload = function () {
-            var object = document.getElementById("object");
-            var position = 50;
-
-            function moveObject() {
-                position += 10;
-                object.style.left = position + "px";
-                if (position >= 500) {
-                    position = 50;
-                }
-            }
-
-            setInterval(moveObject, 50);
-        }
-    </script>
 </body>
 
 </html>
