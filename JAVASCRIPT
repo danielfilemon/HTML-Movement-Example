@@ -1,1 +1,14 @@
+ window.onload = function () {
+            var object = document.getElementById("object");
+            var position = 50;
 
+            function moveObject() {
+                position += 10;
+                object.style.left = position + "px";
+                if (position >= 500) {
+                    position = 50;
+                }
+            }
+
+            setInterval(moveObject, 50);
+        }
